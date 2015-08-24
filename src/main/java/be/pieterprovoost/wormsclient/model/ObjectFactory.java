@@ -21,6 +21,14 @@ public class ObjectFactory {
         return new GetAphiaRecordsByNamesResponse();
     }
 
+    public MatchAphiaRecordsByNamesRequest createMatchAphiaRecordsByNamesRequest() {
+        return new MatchAphiaRecordsByNamesRequest();
+    }
+
+    public MatchAphiaRecordsByNamesResponse createMatchAphiaRecordsByNamesResponse() {
+        return new MatchAphiaRecordsByNamesResponse();
+    }
+
     public GetAphiaRecordsRequest createGetAphiaRecordsRequest() {
         return new GetAphiaRecordsRequest();
     }

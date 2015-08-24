@@ -1,4 +1,4 @@
-package be.pieterprovoost.wormsclient;
+package be.pieterprovoost.wormsclient.client;
 
 import be.pieterprovoost.wormsclient.model.*;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
@@ -65,5 +65,19 @@ public class WormsClient extends WebServiceGatewaySupport {
     public GetAphiaRecordsResponse getAphiaRecords(String name) {
         return getAphiaRecords(name, false, false, false, 0);
     }
+
+    public MatchAphiaRecordsByNamesResponse matchAphiaRecordsByNames(ArrayList<String> names, boolean marineOnly) {
+        MatchAphiaRecordsByNamesRequest request = new MatchAphiaRecordsByNamesRequest();
+        request.setMarineOnly(marineOnly);
+        for (String name : names) {
+            request.getScientificNames().getNames().add(name);
+        }
+        return (MatchAphiaRecordsByNamesResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+    }
+
+    public MatchAphiaRecordsByNamesResponse matchAphiaRecordsByNames(ArrayList<String> names) {
+        return matchAphiaRecordsByNames(names, false);
+    }
+
 
 }
