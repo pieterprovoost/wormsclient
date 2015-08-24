@@ -1,8 +1,5 @@
 import be.pieterprovoost.wormsclient.client.WormsClient;
-import be.pieterprovoost.wormsclient.model.GetAphiaIDResponse;
-import be.pieterprovoost.wormsclient.model.GetAphiaRecordsByNamesResponse;
-import be.pieterprovoost.wormsclient.model.GetAphiaRecordsResponse;
-import be.pieterprovoost.wormsclient.model.MatchAphiaRecordsByNamesResponse;
+import be.pieterprovoost.wormsclient.model.*;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
@@ -38,6 +35,10 @@ public class WormsClientTest {
         // getAphiaRecords
 
         GetAphiaRecordsResponse response4 = client.getAphiaRecords("Abra", true, false, false, 0);
+
+        // getAphiaSynonymsByID
+
+        GetAphiaSynonymsByIDResponse response5 = client.getAphiaSynonymsByID(141439);
 
         logger.info("");
 

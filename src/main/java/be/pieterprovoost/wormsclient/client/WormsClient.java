@@ -79,5 +79,10 @@ public class WormsClient extends WebServiceGatewaySupport {
         return matchAphiaRecordsByNames(names, false);
     }
 
+    public GetAphiaSynonymsByIDResponse getAphiaSynonymsByID(int id) {
+        GetAphiaSynonymsByIDRequest request = new GetAphiaSynonymsByIDRequest();
+        request.setAphiaID(id);
+        return (GetAphiaSynonymsByIDResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+    }
 
 }

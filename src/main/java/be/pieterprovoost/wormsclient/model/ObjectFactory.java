@@ -13,6 +13,14 @@ public class ObjectFactory {
         return new GetAphiaIDResponse();
     }
 
+    public GetAphiaSynonymsByIDRequest createGetAphiaSynonymsByIDRequest() {
+        return new GetAphiaSynonymsByIDRequest();
+    }
+
+    public GetAphiaSynonymsByIDResponse createGetAphiaSynomymsByIdResponse() {
+        return new GetAphiaSynonymsByIDResponse();
+    }
+
     public GetAphiaRecordsByNamesRequest createGetAphiaRecordsByNamesRequest() {
         return new GetAphiaRecordsByNamesRequest();
     }
