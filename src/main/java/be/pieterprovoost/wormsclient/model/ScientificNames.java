@@ -8,16 +8,18 @@ import java.util.ArrayList;
 @XmlType
 public class ScientificNames {
 
-    private ArrayList<String> item = new ArrayList<String>();
+    @XmlElement(name="item")
+    private ArrayList<String> names = new ArrayList<String>();
 
     @XmlAttribute
     public final String arrayType = "xsd:string[]";
 
-    public ArrayList<String> getItem() {
-        return item;
+    public ArrayList<String> getNames() {
+        return names;
     }
 
-    public void setItem(ArrayList<String> item) {
-        this.item = item;
+    public void setNames(ArrayList<String> names) {
+        this.names = names;
     }
+
 }

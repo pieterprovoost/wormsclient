@@ -37,7 +37,7 @@ public class WormsClient extends WebServiceGatewaySupport {
         request.setFuzzy(fuzzy);
         request.setMarineOnly(marineOnly);
         for (String name : names) {
-            request.getScientificNames().getItem().add(name);
+            request.getScientificNames().getNames().add(name);
         }
         return (GetAphiaRecordsByNamesResponse) getWebServiceTemplate().marshalSendAndReceive(request);
     }

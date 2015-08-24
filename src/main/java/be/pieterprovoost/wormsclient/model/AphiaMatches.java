@@ -1,9 +1,6 @@
 package be.pieterprovoost.wormsclient.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -11,13 +8,14 @@ import java.util.ArrayList;
 @XmlType
 public class AphiaMatches {
 
-    private ArrayList<AphiaRecords> item = new ArrayList<AphiaRecords>();
+    @XmlElement(name="item")
+    private ArrayList<AphiaRecords> matches = new ArrayList<AphiaRecords>();
 
-    public ArrayList<AphiaRecords> getItem() {
-        return item;
+    public ArrayList<AphiaRecords> getMatches() {
+        return matches;
     }
 
-    public void setItem(ArrayList<AphiaRecords> item) {
-        this.item = item;
+    public void setMatches(ArrayList<AphiaRecords> matches) {
+        this.matches = matches;
     }
 }

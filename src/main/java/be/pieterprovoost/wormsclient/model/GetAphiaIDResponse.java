@@ -8,14 +8,13 @@ import javax.xml.bind.annotation.*;
 public class GetAphiaIDResponse {
 
     @XmlElement(name="return")
-    private Integer id;
+    private Integer aphiaID;
 
-    public Integer getId() {
-        return id;
+    public Integer getAphiaID() {
+        return aphiaID;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setAphiaID(Integer aphiaID) {
+        this.aphiaID = aphiaID;
     }
-
 }
