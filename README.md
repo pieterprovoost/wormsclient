@@ -15,10 +15,13 @@ The following operations are currently supported:
 
 ```java
 WormsClient client = new WormsClient();
+
 ArrayList<String> names = new ArrayList<String>();
 names.add("Abra alba");
 names.add("Abergasilus amplexus");
 GetAphiaRecordsByNamesResponse response = client.getAphiaRecordsByNames(names);
+
+String json = ResponseSerializer.serialize(response);
 ```
 
 ```json
@@ -39,7 +42,7 @@ GetAphiaRecordsByNamesResponse response = client.getAphiaRecordsByNames(names);
             "validAuthority": "(W. Wood, 1802)",
             "kingdom": "Animalia",
             "phylum": "Mollusca",
-            "classis": "Bivalvia",
+            "class": "Bivalvia",
             "order": "Veneroida",
             "family": "Semelidae",
             "genus": "Abra",
@@ -65,7 +68,7 @@ GetAphiaRecordsByNamesResponse response = client.getAphiaRecordsByNames(names);
             "validAuthority": "Hewitt, 1978",
             "kingdom": "Animalia",
             "phylum": "Arthropoda",
-            "classis": "",
+            "class": "",
             "order": "Poecilostomatoida",
             "family": "Ergasilidae",
             "genus": "Abergasilus",
