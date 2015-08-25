@@ -10,6 +10,7 @@ The following operations are currently supported:
 - matchAphiaRecordsByNames
 - getAphiaRecords
 - getAphiaSynonymsByID
+- getAphiaVernacularsByID
 
 ## Usage
 
