@@ -17,4 +17,5 @@ public class GetAphiaSynonymsByIDResponse {
     public void setAphiaRecords(AphiaRecords aphiaRecords) {
         this.aphiaRecords = aphiaRecords;
     }
+
 }

@@ -1,5 +1,8 @@
 package be.pieterprovoost.wormsclient.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
+
 import javax.xml.bind.annotation.*;
 import java.util.Date;
 
@@ -45,6 +48,7 @@ public class AphiaRecord {
     private String phylum;
 
     @XmlElement(name="class")
+    @SerializedName("class")
     private String classis;
 
     @XmlElement(name="order")

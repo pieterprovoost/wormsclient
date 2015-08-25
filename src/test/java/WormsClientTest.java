@@ -1,5 +1,6 @@
 import be.pieterprovoost.wormsclient.client.WormsClient;
 import be.pieterprovoost.wormsclient.model.*;
+import be.pieterprovoost.wormsclient.serializer.ResponseSerializer;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
@@ -22,7 +23,6 @@ public class WormsClientTest {
 
         ArrayList<String> names1 = new ArrayList<String>();
         names1.add("Abra alba");
-        names1.add("Lanice conchilega");
         names1.add("Abergasilus amplexus");
         GetAphiaRecordsByNamesResponse response2 = client.getAphiaRecordsByNames(names1);
 
@@ -40,7 +40,11 @@ public class WormsClientTest {
 
         GetAphiaSynonymsByIDResponse response5 = client.getAphiaSynonymsByID(141439);
 
-        logger.info("");
+        // getAphiaVernacularsByID
+
+        GetAphiaVernacularsByIDResponse response6 = client.getAphiaVernacularsByID(141439);
+
+        logger.info(ResponseSerializer.serialize(response2));
 
     }
 

@@ -17,8 +17,16 @@ public class ObjectFactory {
         return new GetAphiaSynonymsByIDRequest();
     }
 
-    public GetAphiaSynonymsByIDResponse createGetAphiaSynomymsByIdResponse() {
+    public GetAphiaSynonymsByIDResponse createGetAphiaSynonymsByIDResponse() {
         return new GetAphiaSynonymsByIDResponse();
+    }
+
+    public GetAphiaVernacularsByIDRequest createGetAphiaVernacularsByIDRequest() {
+        return new GetAphiaVernacularsByIDRequest();
+    }
+
+    public GetAphiaVernacularsByIDResponse createGetAphiaVernacularsByIdResponse() {
+        return new GetAphiaVernacularsByIDResponse();
     }
 
     public GetAphiaRecordsByNamesRequest createGetAphiaRecordsByNamesRequest() {
