@@ -1,6 +1,6 @@
 # wormsclient
 
-WoRMS webservice client for Java
+WoRMS webservice client in Java
 
 ## Features
 
